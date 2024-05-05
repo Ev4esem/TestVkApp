@@ -15,6 +15,6 @@ interface NewsApi {
     suspend fun getProducts(
         @Query("skip") skip : Int,
         @Query("limit") limit : Int
-    ) : Flow<ProductDto>
+    ) : List<ProductDto>
 
 }

@@ -1,5 +1,6 @@
 package com.example.testvkapp.data.network_layer.models
 
+import com.example.testvkapp.data.local_layer.ProductEntity
 import com.example.testvkapp.domain.models.Product
 import com.google.gson.annotations.SerializedName
 
@@ -28,7 +29,7 @@ data class ProductDto(
     val title : String
 )
 
-fun ProductDto.toProduct() = Product(
+fun ProductDto.toProductEntity() = ProductEntity(
     brand = brand,
     category =  category,
     description = description ,
