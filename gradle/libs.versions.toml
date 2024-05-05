@@ -16,7 +16,7 @@ coilVersion = "2.2.2"
 okHttps = "4.10.0"
 hiltVersion = "2.49"
 hiltNavigationComposeVersion = "1.2.0"
-roomVersion = "2.5.1"
+roomVersion = "2.6.1"
 
 [libraries]
 

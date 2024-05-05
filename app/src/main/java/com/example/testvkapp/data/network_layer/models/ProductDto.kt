@@ -30,15 +30,8 @@ data class ProductDto(
 )
 
 fun ProductDto.toProductEntity() = ProductEntity(
-    brand = brand,
-    category =  category,
     description = description ,
-    discountPercentage = discountPercentage,
     id = id,
-    images = images,
-    price =  price,
-    rating = rating,
-    stock = stock,
     thumbnail = thumbnail,
     title = title
 )

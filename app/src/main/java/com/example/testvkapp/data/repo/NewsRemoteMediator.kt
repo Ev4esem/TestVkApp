@@ -5,13 +5,10 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
-import com.example.testvkapp.data.local_layer.NewsDao
 import com.example.testvkapp.data.local_layer.NewsDatabase
 import com.example.testvkapp.data.local_layer.ProductEntity
 import com.example.testvkapp.data.network_layer.NewsApi
-import com.example.testvkapp.data.network_layer.models.toProduct
 import com.example.testvkapp.data.network_layer.models.toProductEntity
-import com.example.testvkapp.domain.models.Product
 import retrofit2.HttpException
 
 @OptIn(ExperimentalPagingApi::class)
@@ -52,12 +49,12 @@ class NewsRemoteMediator (
                 if (loadType == LoadType.REFRESH) {
                     newsDb.newsDao().clearAll()
                 }
-                val productEntities = news.map { it.toProductEntity() }
+                val productEntities = news.products.map { it.toProductEntity() }
                 newsDb.newsDao().upsertAll(productEntities)
             }
 
             MediatorResult.Success(
-                endOfPaginationReached = news.isEmpty()
+                endOfPaginationReached = news.products.isEmpty()
             )
         } catch (e : Exception) {
             MediatorResult.Error(e)

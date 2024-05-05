@@ -1,5 +1,6 @@
 package com.example.testvkapp.data.network_layer
 
+import com.example.testvkapp.data.network_layer.models.NewsDto
 import com.example.testvkapp.data.network_layer.models.ProductDto
 import kotlinx.coroutines.flow.Flow
 import retrofit2.http.Body
@@ -15,6 +16,6 @@ interface NewsApi {
     suspend fun getProducts(
         @Query("skip") skip : Int,
         @Query("limit") limit : Int
-    ) : List<ProductDto>
+    ) : NewsDto
 
 }
