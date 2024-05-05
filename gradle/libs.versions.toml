@@ -13,10 +13,8 @@ retrofitVersion = "2.9.0"
 pagingComposeVersion = "3.3.0-alpha03"
 pagingRuntimeVersion = "3.1.1"
 coilVersion = "2.2.2"
-okHttps = "4.10.0"
 hiltVersion = "2.49"
 hiltNavigationComposeVersion = "1.2.0"
-roomVersion = "2.6.1"
 
 [libraries]
 
@@ -35,11 +33,6 @@ com-google-dagger-hilt-android-compiler = { group = "com.google.dagger", name = 
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationComposeVersion" }
 google-dagger = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hiltVersion" }
 
-# Room
-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "roomVersion" }
-
 # Testing
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -50,11 +43,6 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 
 # Coil
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coilVersion" }
-
-#OkHttps
-squareup-okhttp3-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttps" }
-squareup-okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttps" }
-
 
 # Compose
 
@@ -74,8 +62,6 @@ paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.r
 # Retrofit
 squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
 squareup-retrofit2-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
-
-
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

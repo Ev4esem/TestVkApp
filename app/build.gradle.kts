@@ -84,14 +84,6 @@ dependencies {
     implementation(libs.paging.compose)
     implementation(libs.paging.runtime)
 
-    // Room
-    implementation(libs.room.ktx)
-    kapt(libs.room.compiler)
-    implementation(libs.room.paging)
-
-
-
-
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

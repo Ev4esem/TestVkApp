@@ -27,7 +27,6 @@ import com.example.testvkapp.R
 fun NewsErrorScreen(
     modifier : Modifier = Modifier,
     errorText : String,
-    onClickRetry : () -> Unit
 ) {
 
     Surface(
@@ -56,24 +55,6 @@ fun NewsErrorScreen(
                 textAlign = TextAlign.Center
             )
             Spacer(modifier = Modifier.height(36.dp))
-            Button(
-                onClick = onClickRetry,
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary
-                ),
-                contentPadding = PaddingValues(
-                    vertical = 15.dp,
-                    horizontal = 25.dp,
-                )
-            ) {
-
-                Text(
-                    text = stringResource(id = R.string.try_again),
-                    style = MaterialTheme.typography.labelLarge,
-                    color = Color.White
-                )
-
-            }
 
         }
 

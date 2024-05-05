@@ -43,11 +43,14 @@ fun NewsScreen(
 
     }
 
-    Scaffold {
+    Scaffold(
+        modifier = Modifier.padding(vertical = 10.dp)
+    ) {
 
         if (products.loadState.refresh is LoadState.Loading) {
             NewsLoadingScreen()
         } else {
+
             LazyColumn(
                 modifier = Modifier.padding(it),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -59,7 +62,7 @@ fun NewsScreen(
                     NewsItem(
                         title = product.title,
                         thumbnail = product.thumbnail,
-                        description = product.description
+                        description = product.description,
                     )
 
                 }
